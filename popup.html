@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Optin Network Plugin</title>
+    <script src="js/buffer.js"></script>
+    <script src="js/ipfs.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/storage-wrapper.js"></script>    
+    <script src="js/popup.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/switch.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="content">
+        <div class="navtrack-user">            
+            <video id="video" width="180" height="140" autoplay></video>
+        </div>
+        <div class="switch_area">
+            <div style="margin-right: 20px;">Tracking Navigation</div>
+            <div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="navtrack-title">
+            <button type="button" class="btn btn-warning bmd-btn-fab btn-optin" title="Check my Tracked data">
+                <i class="material-icons iconfix">language</i>
+            </button>
+            <button type="button" class="btn btn-warning bmd-btn-fab btn-optin" title="What information Optin Network is tracking from me?">
+                <i class="material-icons iconfix">help</i>
+            </button>
+            <button type="button" class="btn btn-warning bmd-btn-fab btn-optin" title="Logout">
+                <i class="material-icons iconfix">meeting_room</i>
+            </button>
+        </div>        
+        
+    </div>    
+    <div class="bottom">
+        <a href="https://www.optincoin.org" target="_blank">Meet OPTin Coin</a>
+    </div>
+</body>
+
+</html>
