@@ -26,10 +26,10 @@ $(function() {
       pluginEnabledCheckbox.checked = true;
     }
 
-    setSyncValueStorage("optinPluginEnabled",pluginEnabledCheckbox.checked.toString());
+    setLocalValueStorage("optinPluginEnabled",pluginEnabledCheckbox.checked.toString());
   });
 
-  getSyncValueStorage("optinPluginEnabled", function(result) {
+  getLocalValueStorage("optinPluginEnabled", function(result) {
     if (result.optinPluginEnabled == "true")
       pluginEnabledCheckbox.trigger("click");
   });  

@@ -8,7 +8,8 @@ function addTrackInfo(trackinfo){
         }        
         
         result.optinTrackData.push(trackinfo);            
-        setLocalValueStorage(keyOptinTrackData, result.optinTrackData);
+        console.log(result.optinTrackData);
+        setLocalValueStorage(keyOptinTrackData, result.optinTrackData);        
     });
 }
 

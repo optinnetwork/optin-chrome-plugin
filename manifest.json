@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Optin Network Plugin",
   "version": "0.1",
-  "minimum_chrome_version": "23",
+  "minimum_chrome_version": "34",
   "description": "Optin Newtork Chrome Plugin for OPTin Users.",
   "icons": {
     "128": "icon128.png",
@@ -11,14 +11,12 @@
   },
   "permissions": [
     "<all_urls>",
-    "webRequest",
+    "webNavigation",
     "tabs",
     "activeTab",
     "storage",
     "unlimitedStorage",
-    "fileSystem",
-    "videoCapture",
-    "audioCapture"
+    "cookies"
   ],
   "content_security_policy":
     "script-src 'self' 'unsafe-eval'; object-src 'self'",
@@ -32,14 +30,16 @@
     "open_in_tab": true
   },
   "background": {
-    "scripts": [        
-        "js/buffer.js",
-        "js/ipfs.js",
-        "js/storage-wrapper.js",
-        "js/optin-ipfs.js",
+    "scripts": [                
+        "js/browser-polyfill.min.js",
+        "js/optin-context-helper.js",
+        "js/storage-wrapper.js",        
         "js/optin-trackdata.js",      
         "js/trackCapabilities.js",  
-        "js/optin-background-tracker.js"
+        "js/optin-background-sync.js",
+        "js/optin-background-pageloading.js",
+        "js/optin-background-pagecomplete.js",
+        "js/optin-background.js"
     ],
     "persistent": true
   }
