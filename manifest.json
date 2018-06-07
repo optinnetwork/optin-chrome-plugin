@@ -39,6 +39,7 @@
         "js/optin-background-sync.js",
         "js/optin-background-pageloading.js",
         "js/optin-background-pagecomplete.js",
+        "js/optin-background-mousetracking.js",
         "js/optin-background.js"
     ],
     "persistent": true

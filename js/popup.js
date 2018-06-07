@@ -32,7 +32,5 @@ $(function() {
   getLocalValueStorage("optinPluginEnabled", function(result) {
     if (result.optinPluginEnabled == "true")
       pluginEnabledCheckbox.trigger("click");
-  });  
-
-  //takeShotFromWebCam();
+  });    
 });

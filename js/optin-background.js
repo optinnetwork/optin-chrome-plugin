@@ -17,14 +17,9 @@ chrome.runtime.onMessage.addListener(function(msg, sender) {
       var tabContext = getTabContainerById(activeTabId);
 
       if (msg.subject === "updateClicks") {
-        tabContext.trackInfo.pageClicks = msg.clicks;
-
-        if (msg.clicks == 1) {
-          tabContext.trackInfo.firstClickTime =
-            (new Date() - tabContext.trackInfo.loadTime) / 1000;
-        }
+        updateClick(tabContext, msg);
       } else if (msg.subject === "trackMousePosition") {
-        tabContext.trackInfo.mouseTrack.push(msg.position);
+        updateMouseMove(tabContext, msg);
       }
 
       updateTabContainer(tabContext);
