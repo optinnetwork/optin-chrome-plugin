@@ -19,8 +19,23 @@ function yesterdayDataDidNotSend(onLastIsBeforeToday) {
 }
 
 function uploadAndCatalogTrackData(onAfterUploadAndCatalog) {
-  getTrackInfo(function(trackData) {
-    onAfterUploadAndCatalog();
+  getTrackInfo(function(trackData) {          
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "http://prod-optin-network-api.azurewebsites.net/api/track",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json"                
+      },
+      "processData": false,
+      "data": JSON.stringify(trackData)
+    }
+    
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+      onAfterUploadAndCatalog();
+    });
   });
 }
 
